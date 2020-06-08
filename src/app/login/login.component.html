@@ -1,31 +1,27 @@
-<div class="login-container">
-    <img src="assets/imgs//trinvik.png" class="company-logo">
-    <div class="login-form-custom">
-        <div class="logo-section">
-            <img src="assets/imgs//imageedit_1_2235652741.png" class="logo">
-        </div>
-        <div class="header-section">
-            <span> User Login </span>
-        </div>
-        <form>
-            <div class="input-section">
-                <div class="name-input">
-                    <mat-form-field appearance="outline" style="width:100%;">
-                        <mat-label> Enter E-mail ID </mat-label>
-                        <input matInput autofocus required>
-                    </mat-form-field>
-                </div>
-                <div class="password-input">
-                    <mat-form-field appearance="outline" style="width:100%">
-                        <mat-label> Enter Password </mat-label>
-                        <input matInput required>
-                    </mat-form-field>
-                </div>
-            </div>
-            <div class="button-section">
-                <button mat-raised-button color="primary" type="submit" style="width: 100%;" (click)="goToDashboard()">
-                    Sign in </button>
-            </div>
-        </form>
-    </div>
-</div>
+<img src="assets/imgs//trinvik.png" class="company-logo">
+<mat-card class="example-card mat-elevation-z8">
+    <mat-card-header style="justify-content: center;">
+        <mat-card-title>
+            <h1>User Login</h1>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <img mat-card-image class="main-image" src="assets/imgs//imageedit_1_2235652741.png">
+    <form>
+        <mat-card-content>
+            <mat-form-field appearance="outline" style="width:100%;">
+                <mat-label> Enter E-mail ID </mat-label>
+                <input type="text" matInput autofocus required>
+            </mat-form-field>
+            <mat-form-field appearance="outline" style="width:100%">
+                <mat-label> Enter Password </mat-label>
+                <input type="password" matInput required>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit" style="width: 100%;" (click)="goToDashboard()">
+                Sign in
+            </button>
+        </mat-card-actions>
+    </form>
+</mat-card>

@@ -1,188 +1,172 @@
-<div class="wrapper">
-    <mat-card style="padding:0px;border-radius: 0px;height:42px">
-        <mat-toolbar style="background: #d5e1ec;font-size: 20px;color:white; height:42px; font-style: italic;">
-            <mat-toolbar-row>
-                <span style="font-weight: 1000;font-family: '', serif;">
-                    <img class="image" src="assets/imgs//imageedit_1_2235652741.png">
-                </span>
-                <span class="spacer"></span>
-                <button mat-button [matMenuTriggerFor]="menu" style="width: 110px !important; color: black !important;">
-                    <span class="material-icons">
-                        account_circle
-                    </span>
-                    ADMIN
-                </button>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>
-                        <mat-icon>keyboard_tab</mat-icon>
-                        <span>Logout</span>
-                    </button>
-                </mat-menu>
-            </mat-toolbar-row>
-        </mat-toolbar>
-    </mat-card>
+<mat-toolbar class="toolbar-1">
+    <img class="image" src="assets/imgs//imageedit_1_2235652741.png">
+    <span class="spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu" style="width: 110px !important; color: black !important;">
+        <span class="material-icons">
+            account_circle
+        </span>
+        ADMIN
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>keyboard_tab</mat-icon>
+            <span>Logout</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>
 
-    <div id="content">
-        <u></u>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light custom-nav"
-            style="background: #3d9deac7 !important;margin-top:-1.5px">
-            <div class="nav-div">
+<mat-toolbar class="toolbar-2">
+    <!--Customer start-->
+    <button mat-button [matMenuTriggerFor]="customer" class="custom-menu-button">
+        Customer
+        <span class="material-icons dropdown-icon">
+            keyboard_arrow_down
+        </span>
+    </button>
+    <mat-menu #customer="matMenu">
+        <button mat-menu-item class="custom-options" routerLink="/cbs/customer/customer-application">Customers</button>
+    </mat-menu>
+    <!--Customer end-->
 
-                <!--Customer start-->
-                <button mat-button [matMenuTriggerFor]="customer" class="custom-menu-button">
-                    Customer
-                    <span class="material-icons dropdown-icon">
-                        keyboard_arrow_down
-                    </span>
-                </button>
-                <mat-menu #customer="matMenu">
-                    <button mat-menu-item class="custom-options">Customers</button>
-                </mat-menu>
-                <!--Customer end-->
+    <!--Member start-->
+    <button mat-button [matMenuTriggerFor]="member" class="custom-menu-button">
+        Member
+        <span class="material-icons dropdown-icon">
+            keyboard_arrow_down
+        </span>
+    </button>
+    <mat-menu #member="matMenu">
+        <button mat-menu-item class="custom-options" routerLink="/cbs/member/member-application">Application</button>
+        <button mat-menu-item class="custom-options" routerLink="/cbs/member/board-meeting">Board Meeting</button>
+        <button mat-menu-item class="custom-options" routerLink="/cbs/member/member-approval">Approved Member List</button>
+        <button mat-menu-item class="custom-options" routerLink="/cbs/member/add-share">Additional Share</button>
+        <button mat-menu-item class="custom-options" routerLink="/cbs/member/share-refund">Refund Share</button>
+        <button mat-menu-item class="custom-options" routerLink="/cbs/member/divident-issue">Dividend Issue</button>
+        <button mat-menu-item class="custom-options" routerLink="/cbs/member/divident-payment">Dividend Payment</button>
+    </mat-menu>
+    <!--Member end-->
 
-                <!--Member start-->
-                <button mat-button [matMenuTriggerFor]="member" class="custom-menu-button">
-                    Member
-                    <span class="material-icons dropdown-icon">
-                        keyboard_arrow_down
-                    </span>
-                </button>
-                <mat-menu #member="matMenu">
-                    <button mat-menu-item class="custom-options">Application</button>
-                    <button mat-menu-item class="custom-options">Board Meeting</button>
-                    <button mat-menu-item class="custom-options">Approved Member List</button>
-                    <button mat-menu-item class="custom-options">Additional Share</button>
-                    <button mat-menu-item class="custom-options">Refund Share</button>
-                    <button mat-menu-item class="custom-options">Dividend Issue</button>
-                    <button mat-menu-item class="custom-options">Dividend Payment</button>
-                </mat-menu>
-                <!--Member end-->
+    <!--Deposit start-->
+    <button mat-button [matMenuTriggerFor]="deposit" class="custom-menu-button">
+        Deposit
+        <span class="material-icons dropdown-icon">
+            keyboard_arrow_down
+        </span>
+    </button>
+    <mat-menu #deposit="matMenu">
+        <button mat-menu-item class="custom-options" routerLink="/cbs/deposit/deposit-page">Deposit</button>
+        <button mat-menu-item class="custom-options" routerLink="/cbs/deposit/deposit-page/approval">Approval</button>
+        <button mat-menu-item class="custom-options" routerLink="/cbs/deposit/deposit-page/refund"> Deposit Refund</button>
+        <button mat-menu-item class="custom-options" routerLink="/cbs/deposit/deposit-page/fd-partial-refund"> FD Partial Refund</button>
+        <button mat-menu-item class="custom-options" routerLink="/cbs/deposit/deposit-page/pigmy-create"> Pigmy Agent</button>
+        <button mat-menu-item class="custom-options" routerLink="/cbs/deposit/deposit-page/pigmy-integration"> Pigmy Device</button>
+        <button mat-menu-item class="custom-options" routerLink="/cbs/deposit/pigmy-transaction"> Pigmy Transaction</button>
+    </mat-menu>
+    <!--Deposit end-->
 
-                <!--Deposit start-->
-                <button mat-button [matMenuTriggerFor]="deposit" class="custom-menu-button">
-                    Deposit
-                    <span class="material-icons dropdown-icon">
-                        keyboard_arrow_down
-                    </span>
-                </button>
-                <mat-menu #deposit="matMenu">
-                    <button mat-menu-item class="custom-options">Deposit</button>
-                    <button mat-menu-item class="custom-options">Approval</button>
-                    <button mat-menu-item class="custom-options"> Deposit Refund</button>
-                    <button mat-menu-item class="custom-options"> FD Partial Refund</button>
-                    <button mat-menu-item class="custom-options"> Pigmy Agent</button>
-                    <button mat-menu-item class="custom-options"> Pigmy Device</button>
-                    <button mat-menu-item class="custom-options"> Pigmy Transaction</button>
-                </mat-menu>
-                <!--Deposit end-->
+    <!--Loan start-->
+    <button mat-button [matMenuTriggerFor]="loan" class="custom-menu-button">Loan
+        <i class="material-icons dropdown-icon">
+            keyboard_arrow_down
+        </i>
+    </button>
+    <mat-menu #loan="matMenu">
+        <button mat-menu-item class="custom-options" routerLink="/cbs/loan/lad-loan-application">LAD</button>
+        <button mat-menu-item class="custom-options" routerLink="/cbs/loan/gold-loan">Gold</button>
+        <button mat-menu-item class="custom-options" routerLink="/cbs/loan/term-loan">Term</button>
+    </mat-menu>
+    <!--Loan end-->
 
-                <!--Loan start-->
-                <button mat-button [matMenuTriggerFor]="loan" class="custom-menu-button">Loan
-                    <i class="material-icons dropdown-icon">
-                        keyboard_arrow_down
-                    </i>
-                </button>
+    <!--Transaction start-->
+    <button mat-button [matMenuTriggerFor]="transaction" class="custom-menu-button">Transaction
+        <i class="material-icons dropdown-icon">
+            keyboard_arrow_down
+        </i>
+    </button>
+    <mat-menu #transaction="matMenu">
+        <button mat-menu-item class="custom-options">Account Transactions</button>
+        <button mat-menu-item class="custom-options">Fund Transfer</button>
+        <button mat-menu-item class="custom-options">Receipt</button>
+        <button mat-menu-item class="custom-options">Bank Transactions</button>
+        <button mat-menu-item class="custom-options">Expense</button>
+        <button mat-menu-item class="custom-options">E-Stamping</button>
+    </mat-menu>
+    <!--Transaction end-->
 
-                <mat-menu #loan="matMenu">
-                    <button mat-menu-item class="custom-options">LAD</button>
-                    <button mat-menu-item class="custom-options">Gold</button>
-                    <button mat-menu-item class="custom-options">Term</button>
-                </mat-menu>
-                <!--Loan end-->
+    <!--Reports start-->
+    <button mat-button [matMenuTriggerFor]="reports" class="custom-menu-button">Reports
+        <i class="material-icons dropdown-icon">
+            keyboard_arrow_down
+        </i>
+    </button>
+    <mat-menu #reports="matMenu">
+        <button mat-menu-item class="custom-options">Schedule</button>
+        <button mat-menu-item class="custom-options">Member</button>
+        <button mat-menu-item class="custom-options">Savings Bank</button>
+        <button mat-menu-item class="custom-options">Current Account</button>
+        <button mat-menu-item class="custom-options">Nominal Member</button>
+        <button mat-menu-item class="custom-options">Deposits</button>
+        <button mat-menu-item class="custom-options">Pigmy</button>
+        <button mat-menu-item class="custom-options">Gold Loan</button>
+        <button mat-menu-item class="custom-options">Bank</button>
+        <button mat-menu-item class="custom-options">Loan</button>
+        <button mat-menu-item class="custom-options">Monthly Schedule</button>
+        <button mat-menu-item class="custom-options">Board Member</button>
+        <button mat-menu-item class="custom-options">Customer</button>
+        <button mat-menu-item class="custom-options">Account Closer</button>
+        <button mat-menu-item class="custom-options">Accounts</button>
+        <button mat-menu-item class="custom-options">Audit</button>
+        <button mat-menu-item class="custom-options">Transaction</button>
+        <button mat-menu-item class="custom-options">Expense</button>
+        <button mat-menu-item class="custom-options">Bank Transaction</button>
+    </mat-menu>
+    <!--Reports end-->
 
-                <!--Transaction start-->
-                <button mat-button [matMenuTriggerFor]="transaction" class="custom-menu-button">Transaction
-                    <i class="material-icons dropdown-icon">
-                        keyboard_arrow_down
-                    </i>
-                </button>
-                <mat-menu #transaction="matMenu">
-                    <button mat-menu-item class="custom-options">Account Transactions</button>
-                    <button mat-menu-item class="custom-options">Fund Transfer</button>
-                    <button mat-menu-item class="custom-options">Receipt</button>
-                    <button mat-menu-item class="custom-options">Bank Transactions</button>
-                    <button mat-menu-item class="custom-options">Expense</button>
-                    <button mat-menu-item class="custom-options">E-Stamping</button>
-                </mat-menu>
-                <!--Transaction end-->
+    <!--Masters start-->
+    <button mat-button [matMenuTriggerFor]="masters" class="custom-menu-button">Masters
+        <i class="material-icons dropdown-icon">keyboard_arrow_down</i>
+    </button>
+    <mat-menu #masters="matMenu">
+        <button mat-menu-item class="custom-options">Loan Interest charts</button>
+        <button mat-menu-item class="custom-options">Deposit Interest charts</button>
+        <button mat-menu-item class="custom-options">Accounts heads</button>
+        <button mat-menu-item class="custom-options">Users</button>
+        <button mat-menu-item class="custom-options">Groups</button>
+        <button mat-menu-item class="custom-options">Bank</button>
+        <button mat-menu-item class="custom-options">Account Number Format</button>
+    </mat-menu>
+    <!--Masters end-->
 
-                <!--Reports start-->
-                <button mat-button [matMenuTriggerFor]="reports" class="custom-menu-button">Reports
-                    <i class="material-icons dropdown-icon">
-                        keyboard_arrow_down
-                    </i>
-                </button>
-                <mat-menu #reports="matMenu">
-                    <button mat-menu-item class="custom-options">Schedule</button>
-                    <button mat-menu-item class="custom-options">Member</button>
-                    <button mat-menu-item class="custom-options">Savings Bank</button>
-                    <button mat-menu-item class="custom-options">Current Account</button>
-                    <button mat-menu-item class="custom-options">Nominal Member</button>
-                    <button mat-menu-item class="custom-options">Deposits</button>
-                    <button mat-menu-item class="custom-options">Pigmy</button>
-                    <button mat-menu-item class="custom-options">Gold Loan</button>
-                    <button mat-menu-item class="custom-options">Bank</button>
-                    <button mat-menu-item class="custom-options">Loan</button>
-                    <button mat-menu-item class="custom-options">Monthly Schedule</button>
-                    <button mat-menu-item class="custom-options">Board Member</button>
-                    <button mat-menu-item class="custom-options">Customer</button>
-                    <button mat-menu-item class="custom-options">Account Closer</button>
-                    <button mat-menu-item class="custom-options">Accounts</button>
-                    <button mat-menu-item class="custom-options">Audit</button>
-                    <button mat-menu-item class="custom-options">Transaction</button>
-                    <button mat-menu-item class="custom-options">Expense</button>
-                    <button mat-menu-item class="custom-options">Bank Transaction</button>
-                </mat-menu>
-                <!--Reports end-->
+    <!--Logs start-->
+    <button mat-button [matMenuTriggerFor]="logs" class="custom-menu-button">Logs
+        <i class="material-icons dropdown-icon">
+            keyboard_arrow_down
+        </i>
+    </button>
+    <mat-menu #logs="matMenu">
+        <button mat-menu-item class="custom-options">Application logs</button>
+    </mat-menu>
+    <!--Logs end-->
 
-                <!--Masters start-->
-                <button mat-button [matMenuTriggerFor]="masters" class="custom-menu-button">Masters
-                    <i class="material-icons dropdown-icon">keyboard_arrow_down</i>
-                </button>
-                <mat-menu #masters="matMenu">
-                    <button mat-menu-item class="custom-options">Loan Interest charts</button>
-                    <button mat-menu-item class="custom-options">Deposit Interest charts</button>
-                    <button mat-menu-item class="custom-options">Accounts heads</button>
-                    <button mat-menu-item class="custom-options">Users</button>
-                    <button mat-menu-item class="custom-options">Groups</button>
-                    <button mat-menu-item class="custom-options">Bank</button>
-                    <button mat-menu-item class="custom-options">Account Number Format</button>
-                </mat-menu>
-                <!--Masters end-->
+    <!--Calculator start-->
+    <button mat-button [matMenuTriggerFor]="calculator" class="custom-menu-button">Calculator
+        <i class="material-icons dropdown-icon">
+            keyboard_arrow_down
+        </i>
+    </button>
+    <mat-menu #calculator="matMenu">
+        <button mat-menu-item class="custom-options">Deposit Calculator</button>
+    </mat-menu>
+    <!--Calculator end-->
 
-                <!--Logs start-->
-                <button mat-button [matMenuTriggerFor]="logs" class="custom-menu-button">Logs
-                    <i class="material-icons dropdown-icon">
-                        keyboard_arrow_down
-                    </i>
-                </button>
-                <mat-menu #logs="matMenu">
-                    <button mat-menu-item class="custom-options">Application logs</button>
-                </mat-menu>
-                <!--Logs end-->
+    <!--BOD start-->
+    <button mat-stroked-button class="btn-bod"> BOD </button>
+    <!--BOD end-->
+</mat-toolbar>
 
-                <!--Calculator start-->
-                <button mat-button [matMenuTriggerFor]="calculator" class="custom-menu-button">Calculator
-                    <i class="material-icons dropdown-icon">
-                        keyboard_arrow_down
-                    </i>
-                </button>
-                <mat-menu #calculator="matMenu">
-                    <button mat-menu-item class="custom-options">Deposit Calculator</button>
-                </mat-menu>
-                <!--Calculator end-->
+<router-outlet></router-outlet>
 
-                <!--BOD start-->
-                <button mat-stroked-button class="btn-bod"> BOD </button>
-                <!--BOD end-->
-            </div>
-        </nav>
-        <router-outlet></router-outlet>
-    </div>
-</div>  
-<footer class="footer">
-    <div class="container" class="footer__content">
-        <span style="color:#fff;margin-right: 88%;"> &copy;Trinvik 2019 </span>
-        <span style="color:#fff;position: relative;">v7.0</span>
-    </div>
-</footer>
+<mat-toolbar class="toolbar-3">
+    <span style="color:#fff;margin-right: 88%;"> &copy;Trinvik 2019 </span>
+    <span style="color:#fff;position: relative;">v7.0</span>
+</mat-toolbar>
