@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplicationComponent implements OnInit {
 
+  customerFormDiv: boolean = false;
+  customerDetailDiv: boolean = false;
+  customerTableDiv: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  createCustomer() {
+    this.customerFormDiv = true;
+    this.customerTableDiv = true;
+    this.customerDetailDiv = false;
+  }
+
+  closeCustomerForm() {
+    this.customerFormDiv = false;
   }
 
 }

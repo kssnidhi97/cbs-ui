@@ -6,3 +6,27 @@
         <li class="breadcrumb-item active" aria-current="page">Customers</li>
     </ol>
 </nav>
+
+<div class="row noMargin">
+    <div class="col-md-4" *ngIf="customerTableDiv">
+        <mat-card style="padding: 0px;height: 460px;overflow:auto;">
+            <mat-toolbar class="card-title">
+                Customers
+                <span class="spacer"></span>
+                <button mat-stroked-button (click)="createCustomer()">
+                    <mat-icon aria-label="Create new record">add</mat-icon> New
+                </button>
+            </mat-toolbar>
+        </mat-card>
+    </div>
+    <div class="col-md-8" *ngIf="customerFormDiv">
+        <mat-card style="padding: 0px;height: 460px;overflow:auto;">
+            <mat-toolbar class="card-title">Customer Application
+                <span class="spacer"></span>
+                <a mat-icon-button (click)="closeCustomerForm()" style="float:right;">
+                    <mat-icon aria-label="close form" matTooltip="Close form">close</mat-icon>
+                </a>
+            </mat-toolbar>
+        </mat-card>
+    </div>
+</div>
