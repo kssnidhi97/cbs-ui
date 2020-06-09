@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CustomerRoutingModule } from './customer-routing.module';
 import { ApplicationComponent } from './application/application.component';
 import { MaterialModule } from '../shared/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { MaterialModule } from '../shared/material.module';
   imports: [
     CommonModule,
     CustomerRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CustomerModule { }
