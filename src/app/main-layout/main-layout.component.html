@@ -5,10 +5,9 @@
         <span class="material-icons">
             account_circle
         </span>
-        ADMIN
     </button>
     <mat-menu #menu="matMenu">
-        <button mat-menu-item>
+        <button mat-menu-item (click)="logout()">
             <mat-icon>keyboard_tab</mat-icon>
             <span>Logout</span>
         </button>
@@ -160,7 +159,7 @@
     <!--Calculator end-->
 
     <!--BOD start-->
-    <button mat-stroked-button class="btn-bod"> BOD </button>
+    <button mat-stroked-button class="btn-bod" *ngIf="loggedUser.roles[0].groupCode === 'CLERK' || loggedUser.roles[0].groupCode === 'CEO'"> BOD </button>
     <!--BOD end-->
 </mat-toolbar>
 

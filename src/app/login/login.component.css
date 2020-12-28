@@ -3,6 +3,13 @@
 	top:0;
 	left:0;
 }
+
+.society-logo{
+    position:fixed;
+	top:0;
+	right: 0;
+}
+
 .example-card {
     max-width: 500px;
     margin: auto;
@@ -10,7 +17,15 @@
     border:1px solid lightgrey;
 }
 
-.main-image{
-    margin: auto;
-    width: 100%;
-} 
+.main-div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .software-img{
+    width: 200px;
+    height: 75px;
+    margin: 10px auto;
+}

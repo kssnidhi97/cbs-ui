@@ -7,6 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { MaterialModule } from './shared/material.module';
 import { ToastrModule } from 'ngx-toastr';
+import { AuthGuard } from './auth.guard';
+import { LoginService } from './login/login.service';
+import { HttpService } from './shared/http.service';
+import { SessionService } from './shared/session.service';
+import { AccountService } from './account/account.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,12 +21,15 @@ import { ToastrModule } from 'ngx-toastr';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    HttpClientModule,
+    FormsModule, 
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthGuard, LoginService, HttpService, SessionService, AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
